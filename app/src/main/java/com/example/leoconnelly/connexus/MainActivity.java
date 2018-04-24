@@ -1,6 +1,7 @@
 package com.example.leoconnelly.connexus;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         //HELPSHIFT SET UP
         Core.init(All.getInstance());
         InstallConfig installConfig = new InstallConfig.Builder()
+                .setScreenOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE)
                 .setEnableInAppNotification(true)
                 .build();
 
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         //BUTTONS AND WHAT THEY OPEN
 
-        //THE PURPLE BUTTON!!!!!!!
+//        //THE PURPLE BUTTON!!!!!!!
         FindCareButton = (findViewById(R.id.find_care_button));
 
         FindCareButton.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
                 openFindCare();
             }
         });
-
-
 
         //LEARN BUTTON
         LearnButton = (ImageButton) findViewById(R.id.learn);
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                 configBuilder.setRequireEmail(true);
                 configBuilder.setEnableTypingIndicator(true);
                 Support.showFAQs(MainActivity.this, configBuilder.build());
-
                 //com.helpshift.support.Support.showConversation(MainActivity.this, configBuilder.build() );
 
 
@@ -94,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+//open website
         VisitWebsite = (ImageButton) findViewById(R.id.VisitWeb);
 
         VisitWebsite.setOnClickListener(new View.OnClickListener() {
@@ -112,8 +111,12 @@ public class MainActivity extends AppCompatActivity {
     }
 //FIND CARE FUNCTION
     public void openFindCare() {
-        Intent mainActivityToFindCare = new Intent(this, HealthCenterListActivity.class);
-        startActivity(mainActivityToFindCare);
+
+//        Intent mainActivityToFindCare = new Intent(this, HealthCenterListActivity.class);
+//        startActivity(mainActivityToFindCare);
+        Intent openTabs = new Intent(this, TabActivity.class);
+        startActivity(openTabs);
+
     }
 
 

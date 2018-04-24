@@ -11,6 +11,8 @@
         <activity android:name=".HealthCenterListActivity" />
         <activity android:name=".HealthCenterSelectedActivity" />
         <activity android:name=".MoreInfoActivity" />
+        <activity android:name=".TabActivity" />
+
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.0.1" />

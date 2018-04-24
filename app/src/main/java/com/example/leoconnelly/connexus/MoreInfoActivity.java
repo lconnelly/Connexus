@@ -37,7 +37,6 @@ public class MoreInfoActivity extends AppCompatActivity {
 
       // int index = 0;
 
-        System.out.println(index +" BOOOP BOP BOOP BOOP BOPP BOOP");
 
         if (index == 0) {
             //Bowdoin
