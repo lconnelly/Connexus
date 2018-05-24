@@ -57,6 +57,8 @@ public class HealthCenterListActivity extends AppCompatActivity {
 
                 Intent detailIntent = new Intent(mContext, HealthCenterSelectedActivity.class);
 
+                detailIntent.putExtra("latitude", SelectedHealthCareCenter.lat);
+                detailIntent.putExtra("longitude", SelectedHealthCareCenter.longi);
                 detailIntent.putExtra("nameOfCenter", SelectedHealthCareCenter.nameOfCenter);
                 detailIntent.putExtra("neighborhood", SelectedHealthCareCenter.neighborhood);
                 detailIntent.putExtra("imageUrl", SelectedHealthCareCenter.imageUrl);

@@ -1,69 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context="com.example.leoconnelly.connexus.MainActivity">
 
-    <ImageButton
-        android:id="@+id/VisitWeb"
-        android:layout_width="420dp"
-        android:layout_height="128dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/TalkToADocButton"
-        android:background="#0000"
-        app:srcCompat="@android:color/holo_blue_bright" />
+    <LinearLayout
+        android:id="@+id/ll_learn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@mipmap/learn_color_icon" />
+
+        <Button
+            android:id="@+id/learn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="@string/learn"
+            android:textSize="22sp"
+            app:srcCompat="@android:color/holo_blue_bright" />
 
 
 
-    <ImageButton
-        android:id="@+id/TalkToADocButton"
-        android:layout_width="420dp"
-        android:layout_height="128dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/find_care_button"
-        android:background="#0000"
-        app:srcCompat="@android:color/holo_orange_dark" />
 
-    <ImageButton
-        android:id="@+id/find_care_button"
-        android:layout_width="420dp"
-        android:layout_height="128dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/learn"
-        android:background="#0000"
-        app:srcCompat="@android:color/holo_purple" />
 
-    <ImageButton
-        android:id="@+id/learn"
-        android:layout_width="420dp"
-        android:layout_height="128dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="#0000"
-        app:srcCompat="@android:color/holo_blue_bright" />
+    </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/learn_Icon"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:src="@mipmap/learn_icon"
-        android:background="@drawable/hs__screenshot_clear"
+    <LinearLayout
+        android:id="@+id/ll_find_care"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical">
 
-        />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/find_care_color_icon"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/find_care_button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="74dp"
-        android:text="Learn"
-        android:textSize="28dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:id="@+id/find_care_button"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@android:color/holo_purple"
+            android:layout_gravity="center_vertical"
+            android:text="@string/find_care"/>
+    </LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_talk_to_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/talk_to_a_doctor_icon"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:id="@+id/TalkToADocButton"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@android:color/holo_orange_dark"
+            android:layout_gravity="center_vertical"
+            android:text="@string/talk_to_a_doctor"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_visit_website"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/visit_web_color_icon"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"/>
+        <Button
+            android:id="@+id/VisitWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@android:color/holo_blue_bright"
+            android:layout_gravity="center_vertical"
+            android:text="@string/visit_website"/>
+    </LinearLayout>
+
+</LinearLayout>

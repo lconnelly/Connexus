@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Connexus</string>
     <string name="nameOfCenter">Health Center</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="talk_to_a_doctor">Talk to a Doctor</string>
+    <string name="find_care">Find Care</string>
+    <string name="learn">Learn</string>
 
 
 </resources>

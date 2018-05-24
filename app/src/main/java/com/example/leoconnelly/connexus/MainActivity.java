@@ -1,12 +1,15 @@
 package com.example.leoconnelly.connexus;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.helpshift.Core;
 import com.helpshift.All;
@@ -18,15 +21,24 @@ import com.helpshift.support.Support;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton FindCareButton;
-    ImageButton LearnButton;
-    ImageButton TalkToADocButton;
-    ImageButton VisitWebsite;
+    Button FindCareButton;
+    Button LearnButton;
+    Button TalkToADocButton;
+    Button VisitWebsite;
+  //  Button CameraButton;
+
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+//fonts and shit
+
+        //TextView textView = (TextView) findViewById(R.id.learn_text_view);
+        //Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/DINNeuzeitGroteskStd-BdCond.otf");
+        //textView.setTypeface(typeface);
 
 
         //HELPSHIFT SET UP
@@ -64,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //LEARN BUTTON
-        LearnButton = (ImageButton) findViewById(R.id.learn);
+        LearnButton = (Button) findViewById(R.id.learn);
 
 
         LearnButton.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //TALK TO A DOC
-        TalkToADocButton = (ImageButton) findViewById(R.id.TalkToADocButton);
+        TalkToADocButton = (Button) findViewById(R.id.TalkToADocButton);
 
         TalkToADocButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        VisitWebsite = (ImageButton) findViewById(R.id.VisitWeb);
+        VisitWebsite = (Button) findViewById(R.id.VisitWeb);
 
         VisitWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +120,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        /*CameraButton = (Button) findViewById(R.id.camera_button);
+        CameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCamera();
+            }
+        });
+
+            */
+
 
     }
 //FIND CARE FUNCTION
@@ -116,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(mainActivityToFindCare);
     }
 
+    /*
+    public void openCamera() {
+        Intent mainActivityToCamera = new Intent(this, RecordHealthInfo.class);
+        startActivity(mainActivityToCamera);
+    }
 
+*/
 
 }

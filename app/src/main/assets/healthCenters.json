@@ -2,47 +2,61 @@
   "recipes": [
     {
       "title": "BOWDOIN HEALTH CENTER",
-      "image" : "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/11/12/0/12-Days-of-Cookies_sugar-cookies-012_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382540976299.jpeg",
-      "url": "Dorchester, Massachusetts"
+      "image" : "https://i.imgur.com/skEuyVR.png",
+      "url": "Dorchester, Massachusetts",
+      "lat": "42.3059",
+      "longi":"-71.068"
     },
 
     {
       "title": "BETH ISRAEL CHELSEA",
-      "image" : "https://www.edamam.com/web-img/1d0/1d0075b30ec5fc368ce9ccaf3156462a.jpg",
-      "url": "Chelsea, Massachusetts"
+      "image" : "https://i.imgur.com/EgJfhWa.png",
+      "url": "Chelsea, Massachusetts",
+      "lat": "42.4029",
+      "longi": "-71.0203"
     },
 
     {
       "title": "BETH ISRAEL DEACONESS MEDICAL CENTER",
-      "image" : "https://iowagirleats.com/wp-content/uploads/2012/08/DSC_0091_thumb.jpg",
-      "url": "Boston, Massachusetts"
+      "image" : "https://i.imgur.com/9YpbGFA.jpg",
+      "url": "Boston, Massachusetts",
+      "lat": "42.3389",
+      "longi": "-71.1073"
     },
 
     {
       "title": "DIMOCK CENTER",
-      "image" : "http://mixingbowlkids.typepad.com/.a/6a010536fe5b48970c01b8d224a042970c-pi",
-      "url": "Boston, Massachusetts"
+      "image" : "https://i.imgur.com/Buapt0i.png",
+      "url": "Boston, Massachusetts",
+      "lat": "42.3198",
+      "longi": "-71.0976"
     },
 
     {
       "title": "Fenway Health",
-      "image" : "http://www.edamam.com/web-img/5f5/5f51c89f832d50da84e3c05bef3f66f9.jpg",
-      "url": "Boston, Massachusetts"
+      "image" : "https://i.imgur.com/DbFvU7U.png?1",
+      "url": "Boston, Massachusetts",
+      "lat": "42.3440",
+      "longi": "-71.1011"
 
     },
 
 
     {
       "title": "South Cove Medical Center",
-      "image" : "http://www.edamam.com/web-img/5f5/5f51c89f832d50da84e3c05bef3f66f9.jpg",
-      "url": "Quincy, Massachusetts"
+      "image" : "https://i.imgur.com/u7i4HTH.png",
+      "url": "Quincy, Massachusetts",
+      "lat": "42.3210",
+      "longi": "-71.0784"
 
     },
 
     {
       "title": "South Cove Community Health Center-Chinatown",
-      "image" : "http://www.edamam.com/web-img/5f5/5f51c89f832d50da84e3c05bef3f66f9.jpg",
-      "url": "Boston, Massachusetts"
+      "image" : "https://i.imgur.com/rdnc4yH.png",
+      "url": "Boston, Massachusetts",
+      "lat": "42.2951",
+      "longi": "-71.0693"
 
     }
 

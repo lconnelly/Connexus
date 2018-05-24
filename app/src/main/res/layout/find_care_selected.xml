@@ -6,13 +6,14 @@
     android:layout_height="match_parent">
 
 
-    <Button
+    <TextView
         android:id="@+id/Address"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_above="@+id/GetDirections"
         android:layout_alignParentStart="true"
-        android:text="Button" />
+        android:layout_marginLeft="20dp"
+        android:text="Address" />
 
 
     <Button
@@ -21,7 +22,7 @@
         android:layout_height="34.5dp"
         android:layout_above="@+id/Call"
         android:layout_alignParentStart="true"
-        android:text="GetDirections" />
+        android:text="Get Directions" />
 
 
     <Button
@@ -30,7 +31,7 @@
         android:layout_height="34.5dp"
         android:layout_above="@+id/VisitWebsite"
         android:layout_alignParentStart="true"
-        android:text="Button" />
+        android:text="Call" />
 
 
     <Button
@@ -39,7 +40,7 @@
         android:layout_height="34.5dp"
         android:layout_above="@+id/MoreInfo"
         android:layout_alignParentStart="true"
-        android:text="Button" />
+        android:text="Visit Website" />
 
     <Button
         android:id="@+id/MoreInfo"
@@ -47,8 +48,15 @@
         android:layout_height="34.5dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="MoreInfo"
+        android:text="More Info"
         />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="311dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
 
 </RelativeLayout>

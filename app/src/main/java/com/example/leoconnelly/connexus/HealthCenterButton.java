@@ -19,6 +19,8 @@ public class HealthCenterButton {
     public String nameOfCenter;
     public String neighborhood;
     public String imageUrl;
+    public Double lat;
+    public Double longi;
 
     // constructor
     // default
@@ -50,6 +52,8 @@ public class HealthCenterButton {
                 recipe.nameOfCenter = recipes.getJSONObject(i).getString("title");
                 recipe.neighborhood = recipes.getJSONObject(i).getString("url");
                 recipe.imageUrl = recipes.getJSONObject(i).getString("image");
+                recipe.lat = recipes.getJSONObject(i).getDouble("lat");
+                recipe.longi = recipes.getJSONObject(i).getDouble("longi");
                 // add to arraylist
                 healthCenterList.add(recipe);
 
