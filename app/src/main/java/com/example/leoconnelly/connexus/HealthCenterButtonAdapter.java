@@ -1,6 +1,10 @@
 package com.example.leoconnelly.connexus;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +15,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -26,16 +32,37 @@ public class HealthCenterButtonAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<HealthCenterButton> mHealthCentersList;
     private LayoutInflater mInflater;
+    public Typeface custom_fontA;
+    public Typeface custom_fontB;
+    public Typeface custom_fontC;
+    public Typeface custom_fontD;
+
+
+
 
     // constructor
     public HealthCenterButtonAdapter(Context mContext, ArrayList<HealthCenterButton> mHealthCentersList){
+
+        //line of SO
+        //super(mContext);
+
+        mContext.getAssets();
 
         // initialize instances variables
         this.mContext = mContext;
         this.mHealthCentersList = mHealthCentersList;
         mInflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+         custom_fontA = Typeface.createFromAsset(mContext.getAssets(),  "fonts/NeuzeitGro.ttf");
+         custom_fontB = Typeface.createFromAsset(mContext.getAssets(),  "fonts/NeuzeitSLTBookHeavy.ttf");
+         custom_fontC = Typeface.createFromAsset(mContext.getAssets(),  "fonts/DINNeuzeitGroteskStd-BdCond.otf");
+         //custom_fontD = Typeface.createFromAsset(mContext.getAssets(),  "fonts/DINNeuzeitGroteskStd-Light.otf");
+
+
+
+
     }
+
 
     // methods
     // a list of methods we need to override
@@ -82,6 +109,13 @@ public class HealthCenterButtonAdapter extends BaseAdapter {
             // get the view holder from converview
             holder = (ViewHolder)convertView.getTag();
         }
+
+        //set custom fonts
+
+
+
+        //end
+
         // get relavate subview of the row view
         TextView nameOfCenterTextView = holder.nameOfCenterTextView;
         TextView neighborhoodTextView = holder.neighborhoodTextView;
@@ -97,15 +131,27 @@ public class HealthCenterButtonAdapter extends BaseAdapter {
         nameOfCenterTextView.setText(healthCenterButton.nameOfCenter);
         nameOfCenterTextView.setTextColor(ContextCompat.getColor(mContext, R.color.colorAccent));
         nameOfCenterTextView.setTextSize(18);
+        nameOfCenterTextView.setTypeface(custom_fontB);
+        nameOfCenterTextView.setTextColor(Color.parseColor("#FFFFFF"));
+
+        //text.setTextColor(Color.parseColor("#FFFFFF"));
 
         // servingTextView
         neighborhoodTextView.setText(healthCenterButton.neighborhood);
         neighborhoodTextView.setTextSize(14);
         neighborhoodTextView.setTextColor(ContextCompat.getColor(mContext, R.color.colorPrimaryDark));
+        neighborhoodTextView.setTypeface(custom_fontA);
+        neighborhoodTextView.setTextColor(Color.parseColor("#FFFFFF"));
+
+
 
         // imageView
         // use Picasso library to load image from the image url
         Picasso.with(mContext).load(healthCenterButton.imageUrl).into(thumbnailImageView);
+
+
+
+
         return convertView;
     }
 
@@ -118,6 +164,7 @@ public class HealthCenterButtonAdapter extends BaseAdapter {
         public TextView neighborhoodTextView;
         public ImageView thumbnailImageView;
     }
+
 
 
     // intent is used to pass information between activities

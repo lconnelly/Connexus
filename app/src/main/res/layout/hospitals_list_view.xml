@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.leoconnelly.connexus.HealthCenterListActivity">
 
+    <TextView
+        android:id="@+id/descprtion"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#D53D96"
+        android:gravity="center"
+
+        />
+
+
 
     <ListView
         android:id="@+id/hospitals_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
+        android:background="#D53D96"
+        android:divider="#FFFFFF"
+        android:dividerHeight="4px"
+        android:layout_below="@+id/descprtion"
+
+
         />
 </RelativeLayout>

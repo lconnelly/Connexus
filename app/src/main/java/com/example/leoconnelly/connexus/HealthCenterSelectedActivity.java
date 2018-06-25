@@ -2,6 +2,8 @@ package com.example.leoconnelly.connexus;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -34,6 +36,10 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
     Context mContext;
     public double lat;
     public double longi;
+    Typeface boldFont;
+    Typeface buttonFont;
+
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,11 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         setContentView(R.layout.find_care_selected);
 
         //if else statement
+
+        buttonFont = Typeface.createFromAsset(this.getAssets(),  "fonts/Roboto-Regular.ttf");
+        boldFont = Typeface.createFromAsset(this.getAssets(),  "fonts/Roboto-Bold.ttf");
+
+
 
         //String title = this.getIntent().getExtras().getString("title");
 
@@ -75,11 +86,40 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         });
 
 
-        TextView address = findViewById(R.id.Address);
+        TextView centerName = findViewById(R.id.Address);
         Button GetDirections = findViewById(R.id.GetDirections);
         Button call = findViewById(R.id.Call); //done
         Button visitWebsite = findViewById(R.id.VisitWebsite); //done
         Button moreInfo = findViewById(R.id.MoreInfo);
+
+
+        //DEAL WITH UI
+        GetDirections.setTypeface(buttonFont);
+        GetDirections.setTextColor(Color.BLACK);
+
+
+        call.setTypeface(buttonFont);
+        call.setTextColor(Color.BLACK);
+
+        visitWebsite.setTypeface(buttonFont);
+        visitWebsite.setTextColor(Color.BLACK);
+
+        moreInfo.setTypeface(buttonFont);
+        moreInfo.setTextColor(Color.BLACK);
+
+
+
+        centerName.setTypeface(boldFont);
+        centerName.setTextSize(22);
+        centerName.setTextColor(00000);
+
+
+        //DEAL WITH ALL CAPS
+
+        GetDirections.setTransformationMethod(null);
+        call.setTransformationMethod(null);
+        visitWebsite.setTransformationMethod(null);
+        moreInfo.setTransformationMethod(null);
 
 
         //for more info, assign an int for each one.
@@ -87,6 +127,8 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         //if statments checking the value of the int ad
 
         mContext = this;
+
+
 
 
         GetDirections.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +157,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         if (nameOfCenterFromIntent.equalsIgnoreCase("Bowdoin Health Center")) {
                 System.out.println("TEST TEST TEST TEST TEST ");
 
-            address.setText("230 Bowdoin St, Dorchester, MA 02122");
+            centerName.setText("230 Bowdoin St, Dorchester, MA 02122");
 
 
 
@@ -165,7 +207,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         }
         else if (nameOfCenterFromIntent.equalsIgnoreCase("Dimock Center")) {
 
-            address.setText("55 Dimock St, Boston, MA 02119");
+            centerName.setText("55 Dimock St, Boston, MA 02119");
 
 
             call.setOnClickListener(new View.OnClickListener() {
@@ -205,7 +247,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         }
         else if (nameOfCenterFromIntent.equalsIgnoreCase("BETH ISRAEL DEACONESS MEDICAL CENTER")) {
 
-            address.setText("330 Brookline Ave, Boston, MA 02215");
+            centerName.setText("330 Brookline Ave, Boston, MA 02215");
 
 
             call.setOnClickListener(new View.OnClickListener() {
@@ -245,7 +287,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         }
         else if (nameOfCenterFromIntent.equalsIgnoreCase("BETH ISRAEL CHELSEA")) {
 
-            address.setText("1000 Broadway, Chelsea, MA 02150");
+            centerName.setText("1000 Broadway, Chelsea, MA 02150");
 
 
             call.setOnClickListener(new View.OnClickListener() {
@@ -285,7 +327,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
         }
         else if (nameOfCenterFromIntent.equalsIgnoreCase("Fenway Health")) {
 
-            address.setText("1340 Boylston St, Boston, MA 02215");
+            centerName.setText("1340 Boylston St, Boston, MA 02215");
 
 
             call.setOnClickListener(new View.OnClickListener() {
@@ -324,7 +366,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
 
         }
         else if (nameOfCenterFromIntent.equalsIgnoreCase("South Cove Medical Center")) {
-            address.setText("435 Hancock St, Quincy, MA 02171");
+            centerName.setText("435 Hancock St, Quincy, MA 02171");
 
 
             call.setOnClickListener(new View.OnClickListener() {
@@ -356,6 +398,8 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
                     int index = 5;
 
                     Intent openMoreInfo0 = new Intent (mContext, MoreInfoActivity.class);
+                   // openMoreInfo0.putExtra("miniUrl", SelectedHealthCareCenter.imageUrl);
+
                     openMoreInfo0.putExtra("index", index);
                     startActivity(openMoreInfo0);
                 }
@@ -365,7 +409,7 @@ public class HealthCenterSelectedActivity extends AppCompatActivity {
 
         else if (nameOfCenterFromIntent.equalsIgnoreCase("South Cove Community Health Center-Chinatown")) {
 
-            address.setText("885 Washington St., Boston, MA 02111");
+            centerName.setText("885 Washington St., Boston, MA 02111");
 
 
             call.setOnClickListener(new View.OnClickListener() {

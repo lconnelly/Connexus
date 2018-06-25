@@ -9,29 +9,29 @@
     <LinearLayout
         android:id="@+id/ll_learn"
         android:layout_width="match_parent"
+
         android:layout_height="0dp"
         android:layout_gravity="center_vertical"
+        android:paddingLeft="-65dp"
+
         android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_vertical"
-            android:scaleType="fitXY"
-            android:src="@mipmap/learn_color_icon" />
-
-        <Button
+        <ImageButton
             android:id="@+id/learn"
+
             android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
+            android:padding="0dp"
             android:layout_weight="1"
+            android:minHeight="36dp"
+            android:minWidth="36dp"
             android:text="@string/learn"
             android:textSize="22sp"
-            app:srcCompat="@android:color/holo_blue_bright" />
 
-
+           />
 
 
 
@@ -42,49 +42,46 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:paddingLeft="-65dp"
         android:layout_gravity="center_vertical">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@mipmap/find_care_color_icon"
-            android:layout_gravity="center_vertical"
-            android:scaleType="fitXY"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="22sp"
+        <ImageButton
             android:id="@+id/find_care_button"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@android:color/holo_purple"
+            android:layout_width="match_parent"
+            android:padding = "0dp"
+            android:scaleType="centerCrop"
+
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:text="@string/find_care"/>
+            android:layout_weight="1"
+            android:text="@string/learn"
+            android:textSize="22sp"
+            android:minHeight="36dp"
+            android:minWidth="36dp"/>
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_talk_to_doctor"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingLeft="-65dp"
         android:layout_weight="1"
         android:layout_gravity="center_vertical">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@mipmap/talk_to_a_doctor_icon"
-            android:layout_gravity="center_vertical"
-            android:scaleType="fitXY"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="22sp"
+
+        <ImageButton
             android:id="@+id/TalkToADocButton"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@android:color/holo_orange_dark"
+
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:text="@string/talk_to_a_doctor"/>
+            android:padding="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:minHeight="36dp"
+            android:minWidth="36dp"/>
 
 
     </LinearLayout>
@@ -93,23 +90,26 @@
         android:id="@+id/ll_visit_website"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingLeft="-65dp"
         android:layout_weight="1"
         android:layout_gravity="center_vertical">
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@mipmap/visit_web_color_icon"
-            android:layout_gravity="center_vertical"
-            android:scaleType="fitXY"/>
-        <Button
+
+        <ImageButton
             android:id="@+id/VisitWeb"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"            android:textSize="22sp"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@android:color/holo_blue_bright"
+
+            android:scaleType="centerCrop"
+
+
+
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:text="@string/visit_website"/>
+            android:padding="0dp"
+            android:minHeight="36dp"
+            android:minWidth="36dp"
+            android:layout_weight="1"
+            android:textSize="22sp" />
+
     </LinearLayout>
 
 </LinearLayout>

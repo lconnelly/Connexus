@@ -2,11 +2,14 @@ package com.example.leoconnelly.connexus;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,6 +21,8 @@ public class HealthCenterListActivity extends AppCompatActivity {
 
     private ListView mListView ;
     public Context mContext;
+    private TextView description;
+    public Typeface condFont;
 
 
     @Override
@@ -26,6 +31,16 @@ public class HealthCenterListActivity extends AppCompatActivity {
         setContentView(R.layout.hospitals_list_view);
 
         final ArrayList<HealthCenterButton> healthCentersList = HealthCenterButton.getHealthCentersFromFile("healthCenters.json", this);
+
+        condFont = Typeface.createFromAsset(this.getAssets(),  "fonts/DINNeuzeitGroteskStd-Light.otf");
+
+        description = findViewById(R.id.descprtion);
+        description.setText("Tap on any of these great car providers to lear more about them");
+        description.setTextSize(20);
+        description.setTextColor(Color.WHITE);
+        description.setTypeface(condFont);
+
+
 
         if (healthCentersList.size()==2) {
             System.out.println("YES YES YES YES");
@@ -62,12 +77,16 @@ public class HealthCenterListActivity extends AppCompatActivity {
                 detailIntent.putExtra("nameOfCenter", SelectedHealthCareCenter.nameOfCenter);
                 detailIntent.putExtra("neighborhood", SelectedHealthCareCenter.neighborhood);
                 detailIntent.putExtra("imageUrl", SelectedHealthCareCenter.imageUrl);
+                detailIntent.putExtra("miniUrl", SelectedHealthCareCenter.imageUrl);
+
 
                 startActivity(detailIntent);
 
             }
 
         });
+
+
 
        //get arraylists
 

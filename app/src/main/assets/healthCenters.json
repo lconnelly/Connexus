@@ -1,35 +1,42 @@
 {
   "recipes": [
     {
-      "title": "BOWDOIN HEALTH CENTER",
+      "title": "Bowdoin Health Center",
       "image" : "https://i.imgur.com/skEuyVR.png",
       "url": "Dorchester, Massachusetts",
       "lat": "42.3059",
-      "longi":"-71.068"
+      "longi":"-71.068",
+      "mini":"https://imgur.com/Vny2PUh"
     },
 
     {
-      "title": "BETH ISRAEL CHELSEA",
+      "title": "Beth Israel Chelsea",
       "image" : "https://i.imgur.com/EgJfhWa.png",
       "url": "Chelsea, Massachusetts",
       "lat": "42.4029",
-      "longi": "-71.0203"
+      "longi": "-71.0203",
+      "mini":"https://imgur.com/poRBkB9"
+
     },
 
     {
-      "title": "BETH ISRAEL DEACONESS MEDICAL CENTER",
+      "title": "Beth Israel Deaconess Medical Center",
       "image" : "https://i.imgur.com/9YpbGFA.jpg",
       "url": "Boston, Massachusetts",
       "lat": "42.3389",
-      "longi": "-71.1073"
+      "longi": "-71.1073",
+      "mini":"https://imgur.com/Rs4ELqT"
+
     },
 
     {
-      "title": "DIMOCK CENTER",
+      "title": "Dimock Center",
       "image" : "https://i.imgur.com/Buapt0i.png",
       "url": "Boston, Massachusetts",
       "lat": "42.3198",
-      "longi": "-71.0976"
+      "longi": "-71.0976",
+      "mini":"https://imgur.com/DNgGPX8"
+
     },
 
     {
@@ -37,7 +44,8 @@
       "image" : "https://i.imgur.com/DbFvU7U.png?1",
       "url": "Boston, Massachusetts",
       "lat": "42.3440",
-      "longi": "-71.1011"
+      "longi": "-71.1011",
+      "mini":"https://imgur.com/3z24l6x"
 
     },
 
@@ -47,7 +55,8 @@
       "image" : "https://i.imgur.com/u7i4HTH.png",
       "url": "Quincy, Massachusetts",
       "lat": "42.3210",
-      "longi": "-71.0784"
+      "longi": "-71.0784",
+      "mini":"https://imgur.com/MLXZnWJ"
 
     },
 
@@ -56,7 +65,8 @@
       "image" : "https://i.imgur.com/rdnc4yH.png",
       "url": "Boston, Massachusetts",
       "lat": "42.2951",
-      "longi": "-71.0693"
+      "longi": "-71.0693",
+      "mini":"https://imgur.com/maKdk8Z"
 
     }
 

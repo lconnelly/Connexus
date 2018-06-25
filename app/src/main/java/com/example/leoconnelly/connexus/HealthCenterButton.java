@@ -1,6 +1,8 @@
 package com.example.leoconnelly.connexus;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,6 +23,7 @@ public class HealthCenterButton {
     public String imageUrl;
     public Double lat;
     public Double longi;
+    public String mini;
 
     // constructor
     // default
@@ -33,6 +36,8 @@ public class HealthCenterButton {
     // file
     public static ArrayList<HealthCenterButton> getHealthCentersFromFile(String filename, Context context){
         ArrayList<HealthCenterButton> healthCenterList = new ArrayList<HealthCenterButton>();
+
+        //ArrayList<HealthCenterButton> miniList = new ArrayList<HealthCenterButton>();
 
 
         // try to read from JSON file
@@ -54,15 +59,26 @@ public class HealthCenterButton {
                 recipe.imageUrl = recipes.getJSONObject(i).getString("image");
                 recipe.lat = recipes.getJSONObject(i).getDouble("lat");
                 recipe.longi = recipes.getJSONObject(i).getDouble("longi");
+                recipe.mini = recipes.getJSONObject(i).getString("mini");
                 // add to arraylist
                 healthCenterList.add(recipe);
 
             }
+           /* for (int i = 0; i < recipes.length(); i++){
+                HealthCenterButton recipe = new HealthCenterButton();
+                recipe.mini = recipes.getJSONObject(i).getString("mini");
+                // add to arraylist
+                miniList.add(recipe);
+
+            }
+*/
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
         return healthCenterList;
+
+
     }
 
 
@@ -85,5 +101,7 @@ public class HealthCenterButton {
 
         return json;
     }
+
+
 
 }

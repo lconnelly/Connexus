@@ -1,17 +1,23 @@
 package com.example.leoconnelly.connexus;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 /**
  * Created by leoconnelly on 4/11/18.
  */
 
 public class MoreInfoActivity extends AppCompatActivity {
-    ImageView moreInfoImage;
+    ImageButton moreInfoImage;
     TextView moreInfoText;
 
     @Override
@@ -19,10 +25,40 @@ public class MoreInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.more_info);
 
+       Context mContext = this;
 
 
-        //moreInfoImage.findViewById(R.id.health_center_more_info_image);
+       // moreInfoImage.findViewById(R.id.moreInfoPicture);
         moreInfoText = findViewById(R.id.more_info_text);
+       // moreInfoImage = findViewById(R.id.moreInfoPicture);
+
+//get array
+
+        final ArrayList<HealthCenterButton> healthCentersList = HealthCenterButton.getHealthCentersFromFile("healthCenters.json", this);
+        final ArrayList <String> miniList = new ArrayList <String>();
+
+
+        for (HealthCenterButton healthCenterButton : healthCentersList) {
+            miniList.add(healthCenterButton.mini);
+           System.out.println("BEEEP BEEP BEEP BOOP BOP BEEPED BOOP BEEP");
+            System.out.println(miniList);
+       }
+
+
+
+       //set up array for mini iamges
+
+
+
+
+
+
+
+        /*
+        ImageView iw= (ImageView)findViewById(R.id.imageView1);
+
+         */
+
 
         //make it scrollable
         moreInfoText.setMovementMethod(new ScrollingMovementMethod());
@@ -47,6 +83,12 @@ public class MoreInfoActivity extends AppCompatActivity {
                     " maintaining a tradition of working with residents to identify and meet their " +
                     "unique health needs. The mission of the health center is to provide excellent, " +
                     "compassionate care to our patients and support the health of the entire community.");
+            Picasso.with(mContext).load(miniList.get(1)).into(moreInfoImage);
+           // moreInfoImage =
+            //        Picasso.with(mContext).load(healthCenterButton.imageUrl).into(thumbnailImageView);
+
+
+
 
         }
 
@@ -57,6 +99,7 @@ public class MoreInfoActivity extends AppCompatActivity {
                     "we bring world-class health care to patients north of Boston. " +
                     "Our patients have the best of all worlds: dedicated staff, the atmosphere of a private practice, " +
                     "and access to the expertise, resources, and systems of Beth Israel Deaconess Medical Center.");
+
 
         }
 
