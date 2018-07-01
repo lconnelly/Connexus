@@ -32,10 +32,10 @@ public class HealthCenterListActivity extends AppCompatActivity {
 
         final ArrayList<HealthCenterButton> healthCentersList = HealthCenterButton.getHealthCentersFromFile("healthCenters.json", this);
 
-        condFont = Typeface.createFromAsset(this.getAssets(),  "fonts/DINNeuzeitGroteskStd-Light.otf");
+        condFont = Typeface.createFromAsset(this.getAssets(),  "fonts/URW++ - NeuzeitGro Bold.ttf");
 
         description = findViewById(R.id.descprtion);
-        description.setText("Tap on any of these great car providers to lear more about them");
+        description.setText("Tap on any of these great care providers to learn more about them");
         description.setTextSize(20);
         description.setTextColor(Color.WHITE);
         description.setTypeface(condFont);

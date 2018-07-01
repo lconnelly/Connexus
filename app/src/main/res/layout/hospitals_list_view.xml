@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.leoconnelly.connexus.HealthCenterListActivity">
+    tools:context="com.example.leoconnelly.connexus.HealthCenterListActivity"
+    android:background="#D53D96"
+    >
+
 
     <TextView
         android:id="@+id/descprtion"
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="90dp"
         android:background="#D53D96"
         android:gravity="center"
-
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:lineSpacingExtra="-5dp"
         />
 
 

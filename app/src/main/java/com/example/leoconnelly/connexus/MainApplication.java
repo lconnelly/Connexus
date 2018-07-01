@@ -83,5 +83,7 @@ public class MainApplication extends Application implements Support.Delegate {
     public void didReceiveNotification(int newMessagesCount) {
         Log.d(TAG, "new messages count : " + newMessagesCount);
     }
+
+    
 }
 
