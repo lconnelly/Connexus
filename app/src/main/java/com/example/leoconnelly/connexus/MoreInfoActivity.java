@@ -1,15 +1,19 @@
 package com.example.leoconnelly.connexus;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +23,8 @@ import java.util.ArrayList;
 public class MoreInfoActivity extends AppCompatActivity {
     ImageButton moreInfoImage;
     TextView moreInfoText;
-
+    TextView titleText;
+    View mrLine;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +32,35 @@ public class MoreInfoActivity extends AppCompatActivity {
 
        Context mContext = this;
 
+        final ArrayList<HealthCenterButton> healthCentersList = HealthCenterButton.getHealthCentersFromFile("healthCenters.json", this);
 
-       // moreInfoImage.findViewById(R.id.moreInfoPicture);
+        String urlString = "https://imgur.com/Rs4ELqT";
+
+        //Set line color
+        mrLine = findViewById(R.id.mr_line);
+        mrLine.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+        moreInfoImage = findViewById(R.id.moreInfoPicture);
+        Picasso.with(mContext).load("http://i.imgur.com/DvpvklR.png").into(moreInfoImage);
+
+
+        // moreInfoImage.findViewById(R.id.moreInfoPicture);
         moreInfoText = findViewById(R.id.more_info_text);
+        moreInfoText.setText("yeet");
+        moreInfoText.setTextColor(Color.parseColor("#FFFFFF"));
+
        // moreInfoImage = findViewById(R.id.moreInfoPicture);
 
-//get array
+        titleText = findViewById(R.id.about_the_prov);
+        titleText.setTextColor(Color.parseColor("#FFFFFF"));
+        titleText.setTextSize(18);
+        //titleText.setText("Yah yah yeet");
 
-        final ArrayList<HealthCenterButton> healthCentersList = HealthCenterButton.getHealthCentersFromFile("healthCenters.json", this);
+
+        //text.setTextColor(Color.parseColor("#FFFFFF"));
+
+        //get array
+
         final ArrayList <String> miniList = new ArrayList <String>();
 
 
@@ -51,6 +77,9 @@ public class MoreInfoActivity extends AppCompatActivity {
 
 
 
+    //int get intent
+
+        //int index = this.getIntent(index);
 
 
 
@@ -66,6 +95,8 @@ public class MoreInfoActivity extends AppCompatActivity {
        // int index = getIntent(index);
 
         int index = getIntent().getExtras().getInt("index");
+
+        System.out.println(index + "DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING DING LOOK HERE HERE HERE HERE HERE HERE HERE HERE");
 
         //String intentStringNumber = getIntent().getStringExtra("index");
 
@@ -83,10 +114,11 @@ public class MoreInfoActivity extends AppCompatActivity {
                     " maintaining a tradition of working with residents to identify and meet their " +
                     "unique health needs. The mission of the health center is to provide excellent, " +
                     "compassionate care to our patients and support the health of the entire community.");
-            Picasso.with(mContext).load(miniList.get(1)).into(moreInfoImage);
+            Picasso.with(mContext).load("https://imgur.com/Vny2PUh.jpg").into(moreInfoImage);
            // moreInfoImage =
             //        Picasso.with(mContext).load(healthCenterButton.imageUrl).into(thumbnailImageView);
 
+            titleText.setText("Bowdoin Street Health Center");
 
 
 
@@ -100,6 +132,9 @@ public class MoreInfoActivity extends AppCompatActivity {
                     "Our patients have the best of all worlds: dedicated staff, the atmosphere of a private practice, " +
                     "and access to the expertise, resources, and systems of Beth Israel Deaconess Medical Center.");
 
+            Picasso.with(mContext).load("https://imgur.com/poRBkB9.jpg”").into(moreInfoImage);
+            titleText.setText("BIDMC Chelsea");
+
 
         }
 
@@ -110,6 +145,10 @@ public class MoreInfoActivity extends AppCompatActivity {
                     "the oldest clinical research laboratory in the United States, " +
                     "has been located on this site since 1973");
 
+
+            Picasso.with(mContext).load("https://imgur.com/Rs4ELqT.jpg").into(moreInfoImage);
+
+            titleText.setText("BIDMC");
         }
 
         else  if (index == 1) {
@@ -118,6 +157,9 @@ public class MoreInfoActivity extends AppCompatActivity {
                     " In 2013, Dimock handled over 76,000 visits annually with 17,000 unique patients and " +
                     "clients representing a wide range of socioeconomic and ethnic backgrounds.");
 
+            Picasso.with(mContext).load("http://i.imgur.com/DvpvklR.png").into(moreInfoImage);
+
+            titleText.setText("Dimock Community Health Center");
         }
 
         else  if (index == 4) {
@@ -130,6 +172,10 @@ public class MoreInfoActivity extends AppCompatActivity {
                     "Fenway was a drop-in clinic providing free blood pressure checks and STD screenings. Over the years, Fenway obtained permanent space and incorporated as a freestanding health center with a staff of one volunteer doctor, one nurse and one intake worker. Today, Fenway Health has a budget of more than $90 million, a staff of 500 and a patient population of more than 28,000. " +
                     "Fenway Health is a Federally Qualified Community Health Center.");
 
+            Picasso.with(mContext).load("https://imgur.com/3z24l6x.jpg").into(moreInfoImage);
+            titleText.setText("Fenway Health");
+
+
         }
 
         else  if (index == 5) {
@@ -139,6 +185,10 @@ public class MoreInfoActivity extends AppCompatActivity {
                     "This mission is accomplished by providing high quality, " +
                     "community-based health care and health promotion programs " +
                     "that are accessible and linguistically and culturally competent for these populations.");
+
+            Picasso.with(mContext).load("https://imgur.com/MLXZnWJ.jpg").into(moreInfoImage);
+
+            titleText.setText("South Cove Medical Center");
 
         }
 
@@ -152,6 +202,11 @@ public class MoreInfoActivity extends AppCompatActivity {
                     " community-based health care and health promotion programs" +
                     " that are accessible and " +
                     "linguistically and culturally competent for these populations");
+
+            Picasso.with(mContext).load("https://imgur.com/maKdk8Z.jpg").into(moreInfoImage);
+            titleText.setText("South Cove China Town");
+
+
 
         }
 

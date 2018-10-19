@@ -16,4 +16,17 @@
 
     <style name="Helpshift.Theme.Base" parent="MyCustomHelpshiftTheme"/>
 
+
+
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#D749B9</item>
+    </style>
+
+
+
+
 </resources>

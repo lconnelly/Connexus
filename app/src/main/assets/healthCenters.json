@@ -2,7 +2,7 @@
   "recipes": [
     {
       "title": "Bowdoin Health Center",
-      "image" : "https://i.imgur.com/skEuyVR.png",
+      "image" : "https://imgur.com/sXg5oD1.png",
       "url": "Dorchester, Massachusetts",
       "lat": "42.3059",
       "longi":"-71.068",
@@ -11,7 +11,7 @@
 
     {
       "title": "Beth Israel Chelsea",
-      "image" : "https://i.imgur.com/EgJfhWa.png",
+      "image" : "https://imgur.com/PYBMbNL.png",
       "url": "Chelsea, Massachusetts",
       "lat": "42.4029",
       "longi": "-71.0203",
@@ -21,7 +21,7 @@
 
     {
       "title": "Beth Israel Deaconess Medical Center",
-      "image" : "https://i.imgur.com/9YpbGFA.jpg",
+      "image" : "https://imgur.com/iZElLpi.png",
       "url": "Boston, Massachusetts",
       "lat": "42.3389",
       "longi": "-71.1073",
@@ -41,7 +41,7 @@
 
     {
       "title": "Fenway Health",
-      "image" : "https://i.imgur.com/DbFvU7U.png?1",
+      "image" : "https://imgur.com/SL087V2.png",
       "url": "Boston, Massachusetts",
       "lat": "42.3440",
       "longi": "-71.1011",
@@ -52,7 +52,7 @@
 
     {
       "title": "South Cove Medical Center",
-      "image" : "https://i.imgur.com/u7i4HTH.png",
+      "image" : "https://imgur.com/FPV4YDl.png",
       "url": "Quincy, Massachusetts",
       "lat": "42.3210",
       "longi": "-71.0784",
@@ -62,11 +62,11 @@
 
     {
       "title": "South Cove Community Health Center-Chinatown",
-      "image" : "https://i.imgur.com/rdnc4yH.png",
+      "image" : "https://imgur.com/BtZJYER.pngs",
       "url": "Boston, Massachusetts",
       "lat": "42.2951",
       "longi": "-71.0693",
-      "mini":"https://imgur.com/maKdk8Z"
+      "mini":"https://imgur.com/maKdk8Z."
 
     }
 

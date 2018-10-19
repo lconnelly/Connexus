@@ -1,5 +1,8 @@
 package com.example.leoconnelly.connexus;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton LearnButton;
     ImageButton TalkToADocButton;
     ImageButton VisitWebsite;
+    Context mContext;
   //  Button CameraButton;
 
     TextView textView;
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         options.inSampleSize = 8;
 
         super.onCreate(savedInstanceState);
+
+        mContext = this;
 
 
 //fonts and shit
@@ -155,6 +161,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+        builder.setCancelable(true);
+        builder.setTitle("Warning");
+        builder.setMessage("The information contained herein should NOT be used as a substitute for the advice of an appropriately qualified and licensed physician or other health care provider. The information provided here is for informational purposes only. Please note that the agents in 'Talk to a doctor', may be a fourth year medical student. Additonally, please be aware that you're questions in 'Ask a Doctor' may recorded for devolpment purposes. Any personal information, including your name and email, will not be recorded");
+        builder.setPositiveButton("I understand",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
 
 
         /*CameraButton = (Button) findViewById(R.id.camera_button);

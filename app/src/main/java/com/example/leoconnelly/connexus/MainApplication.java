@@ -1,8 +1,14 @@
 package com.example.leoconnelly.connexus;
 
+import android.app.Activity;
 import android.app.Application;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.widget.Toast;
 
+import com.google.firebase.messaging.RemoteMessage;
 import com.helpshift.All;
 import com.helpshift.Core;
 import com.helpshift.InstallConfig;
@@ -11,6 +17,9 @@ import com.helpshift.support.Log;
 import com.helpshift.support.Support;
 
 import java.io.File;
+import java.util.Map;
+
+import static com.google.android.gms.stats.GCoreWakefulBroadcastReceiver.startWakefulService;
 
 public class MainApplication extends Application implements Support.Delegate {
 
@@ -23,6 +32,8 @@ public class MainApplication extends Application implements Support.Delegate {
         Core.init(All.getInstance());
         InstallConfig installConfig = new InstallConfig.Builder()
                 .setEnableInAppNotification(true)
+
+                .setNotificationIcon(R.drawable.hs__cam_action_send_feedback)
                 .build();
 
         try {
@@ -83,7 +94,45 @@ public class MainApplication extends Application implements Support.Delegate {
     public void didReceiveNotification(int newMessagesCount) {
         Log.d(TAG, "new messages count : " + newMessagesCount);
     }
+/*
+    private void sendRegistrationIdToBackend() {
+        // Send registrationId to Helpshift
+        Core.registerDeviceToken(this, regid);
+    }
 
-    
+    @Override
+    public void onReceive(Context context,Intent intent) {
+        if(intent.getExtras().getString("origin").equals("helpshift")) {
+            Core.handlePush(context, intent);
+        }
+        // Explicitly specify that GcmIntentService will handle the intent.
+        ComponentName comp = new ComponentName(context.getPackageName(),
+                GcmIntentService.class.getName());
+        // Start the service, keeping the device awake while it is launching.
+        startWakefulService(context, (intent.setComponent(comp)));
+        setResultCode(Activity.RESULT_OK);
+    }
+
+
+    @Override
+    public void onMessageReceived(String from, Bundle data) {
+        String origin = data.getString("origin");
+        if (origin != null && origin.equals("helpshift")) {
+            Core.handlePush(this, data);
+        }
+    }
+
+    @Override
+    public void onMessageReceived(RemoteMessage message) {
+        Map<String, String> data = message.getData();
+        String origin = data.get("origin");
+        if (origin != null && origin.equals("helpshift")) {
+            Core.handlePush(this, data);
+        }
+    }
+
+
+*/
+
 }
 
